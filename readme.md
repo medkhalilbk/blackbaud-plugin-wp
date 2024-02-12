@@ -1,4 +1,4 @@
-# WordPress Plugin Name
+# blackbaud-plugin-wp
 
 A brief description of what the plugin does and why it's useful.
 
