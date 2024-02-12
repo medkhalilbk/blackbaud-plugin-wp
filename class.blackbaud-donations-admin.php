@@ -56,23 +56,13 @@ class Blackbaud_donations_admin {
         add_submenu_page( 'blackbaud-donations', 'USA Mode', 'Currency', 'manage_options', 'usa_switch', array('Blackbaud_donations_admin', 'usa_switch_page') );
     }
 
-
-    // Function to retrieve the currency symbol from the database
-function get_blackbaud_currency_symbol() {
-    // Use WordPress options API to retrieve the currency symbol
-    return get_option('blackbaud_currency_symbol', '&pound;'); // Default to Pound (£) if not set
-}
-
-// Function to update the currency symbol in the database
-function update_blackbaud_currency_symbol($symbol) {
-    // Use WordPress options API to update the currency symbol
-    update_option('blackbaud_currency_symbol', $symbol);
-}
+ 
+ 
 
 
 public static function usa_switch_page(){
 
-$currency = get_blackbaud_currency_symbol();
+$currency = get_option('blackbaud_currency_symbol', '&pound;');
 $selected_currency = isset($_POST['currency-symbol']) ? $_POST['currency-symbol'] : $currency; // Default to the current currency if not submitted
 
 echo '<h1>Choose Currency Symbol :</h1>';
@@ -93,7 +83,8 @@ echo '</form>';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve selected currency symbol
     $selected_currency = $_POST['currency-symbol'];
-    update_blackbaud_currency_symbol($selected_currency) ;
+   
+    update_option('blackbaud_currency_symbol', $symbol);
    /*  define('BLACKBAUD_DONATIONS__CURRENCY', $selected_currency); */
     echo '<p>Currency symbol selected: ' . htmlspecialchars($selected_currency) . '</p>';
 }
