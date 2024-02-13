@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve selected currency symbol
     $selected_currency = $_POST['currency-symbol'];
    
-    update_option('blackbaud_currency_symbol', $symbol);
+    update_option('blackbaud_currency_symbol', $selected_currency);
    /*  define('BLACKBAUD_DONATIONS__CURRENCY', $selected_currency); */
     echo '<p>Currency symbol selected: ' . htmlspecialchars($selected_currency) . '</p>';
 }
