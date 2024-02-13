@@ -71,8 +71,8 @@ echo '<p>Select the currency symbol you prefer:</p>';
 echo '<form method="post">';
 echo '<label for="currency-symbol">Currency Symbol:</label>';
 echo '<select name="currency-symbol" id="currency-symbol">';
-echo '<option value="&pound;" ' . ($currency == "&pound;" ? "selected" : "") . '>Pound (£)</option>';
-echo '<option value="&dollar;" ' . ($currency == "&dollar;" ? "selected" : "") . '>Dollar ($)</option>';
+echo '<option value="&pound;" ' . ($currency == "£" ? "selected" : "") . '>Pound (£)</option>';
+echo '<option value="&dollar;" ' . ($currency == "$" ? "selected" : "") . '>Dollar ($)</option>';
 // Add more currency options as needed
 echo '</select>';
 echo '<button type="submit" class="button button-primary">Submit</button>';
