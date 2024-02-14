@@ -35,7 +35,7 @@
                     
 
                     <div class="et-summary__item-amount">
-                        <span><?=BLACKBAUD_DONATIONS__CURRENCY?><span class="fund-id-<?=$donation->fund_id?>-total"><?=$donation->amount * $donation->quantity?></span></span>
+                        <span><?php echo get_option('blackbaud_currency_symbol', '&pound;');?><span class="fund-id-<?=$donation->fund_id?>-total"><?=$donation->amount * $donation->quantity?></span></span>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                             <span class="et-summary__extras-item-title"><?=$fund_details['name']?></span>
                             <input type="checkbox" class="checkout-help-further-appeal-items help-further-fund-id-<?=$fund_id?>" data-id="<?=$fund_id?>" data-amount="<?=$fund_details['amount']?>" <?=array_key_exists($fund_id, $donations) ? 'checked="checked"' : ''?>>
                         </div>
-                        <span class="et-summary__extras-item-amount"> <?=BLACKBAUD_DONATIONS__CURRENCY?><?=$fund_details['amount']?></span>
+                        <span class="et-summary__extras-item-amount"> <?php echo get_option('blackbaud_currency_symbol', '&pound;');?><?=$fund_details['amount']?></span>
                     </div>
                 <?php
                 endforeach;

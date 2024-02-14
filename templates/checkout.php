@@ -73,7 +73,7 @@ if ($donations_cart_total > 0): ?>
                                                 
 
                                                 <div class="et-summary__item-amount">
-                                                    <span><?=BLACKBAUD_DONATIONS__CURRENCY?><span class="fund-id-<?=$donation->fund_id?>-total"><?=number_format($donation->amount * $donation->quantity, 2)?></span></span>
+                                                    <span><?=get_option('blackbaud_currency_symbol', '&pound;');?><span class="fund-id-<?=$donation->fund_id?>-total"><?=number_format($donation->amount * $donation->quantity, 2)?></span></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -90,7 +90,7 @@ if ($donations_cart_total > 0): ?>
                 <div class="et-checkout__summary-total">
                     <div class="et-checkout__summary-final-total">
                         <div class="et-checkout__summary-total-title"><h3>Total Donation</h3></div>
-                        <h3 class="et-checkout__summary-total-amount donations-cart-total">&pound;<?=$donations_cart_total?></h3>
+                        <h3 class="et-checkout__summary-total-amount donations-cart-total"><?=  get_option('blackbaud_currency_symbol', '&pound;'); echo $donations_cart_total;?></h3>
                     </div>
                 </div>
 

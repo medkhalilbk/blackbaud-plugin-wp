@@ -18,7 +18,6 @@ if ( !function_exists( 'add_action' ) ) {
 
 
 define( 'BLACKBAUD_DONATIONS__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'BLACKBAUD_DONATIONS__CURRENCY', '&pound;');
 define( 'BLACKBAUD_DONATIONS__DB_VERSION', '2.0');
 
 register_activation_hook( __FILE__, array( 'Blackbaud_donations', 'plugin_activation' ) );

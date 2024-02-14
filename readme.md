@@ -20,10 +20,10 @@ Describe how to use the plugin, including any settings or options available.
 - Added error logging section in menu
 - Converting BLACKBAUD_DONATIONS__CURRENCY from constant to Wordpress variable stored in DB 
 
-<!-- ### Version 1.2 (2024-04-15)
-- Fixed security vulnerability
-- Updated translations
-- Enhanced user interface -->
+### Version 1.2 (2024-04-15)
+- Fixed currency bugs
+- Updated header currency 
+- Updated checkout sidebar 
 
 ## Contributing
 
